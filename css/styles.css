@@ -1,0 +1,255 @@
+/* styles.css */
+html {
+    font-size: 16px;
+    background-color: #333;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a {
+    font-size: 1.2rem;
+}
+
+header {
+    text-align: left;
+    color: #fff;
+    text-align: left;
+    padding: 1rem 3rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+header img {
+    text-align: left;
+    margin-left: -2rem;
+    margin-bottom: -1rem;
+    width: 100px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+.menu-links-container ul {
+    list-style: none;
+    padding: 0rem 3rem;
+    display: flex;
+    flex-direction: row; /* Initially display links horizontally */
+    justify-content: left; /* Center links horizontally */
+}
+
+.menu.show .menu-links-container ul {
+    display: flex; /* Show the links when the .menu has the .show class */
+    /* You can use 'block' or 'flex' depending on your desired layout */
+}
+
+.menu.hide .menu-links-container ul {
+    display: none; /* Hide the links when the .menu has the .hide class */
+}
+
+nav {
+    text-align: left;
+    background-color: #333;
+    position: sticky; /* Stick navigation to the top */
+    top: 0; /* Place it at the top of the viewport */
+    z-index: 100; /* Ensure it's on top of other elements */
+    padding: .5rem 0; /* Add vertical padding */
+}
+
+nav ul li {
+    margin-right: 1.5rem;
+}
+
+/* Remove default blue color and underlining from links */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease; /* Add transition for fade effect */
+}
+
+/* Hover effect for links */
+nav ul li a:hover {
+    color: rgba(255, 255, 255, 0.7); /* Slight fade effect on hover */
+}
+
+section {
+    background-color: #222;
+    padding: 1rem 0;
+}
+
+section p {
+    font-size: 1.2rem;
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+/* custom section styles */
+
+section#shaders {
+    margin-top: -1rem;
+}
+
+section#contact {
+    background-color: #333;
+}
+
+section img{
+    width: 256px;
+    height: 256px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: left;
+    background-color: #333;
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
+}
+
+.content-row {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.content-column {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.content img {
+    height: auto;
+}
+
+/* Scroll-to-top button styles */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.scroll-to-top a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Show the button when scrolling down */
+.scroll-to-top.show {
+    display: block;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    gap: 20px; /* Add spacing between icons */
+}
+
+.footer-icons a {
+    text-decoration: none; /* Remove underlines from the links */
+}
+
+svg {
+    fill: none; /* Set the fill color to white */
+    stroke: white;
+    stroke-width: 1px;
+    width: 3.125rem; /* 50px in rem units (50px / 16px = 3.125rem assuming root font size is 16px) */
+    height: 3.125rem; /* 50px in rem units */
+}
+
+/* Burger menu */
+
+.burger-menu {
+    display: none;
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    cursor: pointer;
+    z-index: 999; /* Ensure it's on top of other content */
+}
+  
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff; /* Adjust the color as needed */
+    margin: 5px 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+  
+  /* CSS for the menu toggle animation */
+.burger-menu.show .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+  
+.burger-menu.show .line:nth-child(2) {
+    opacity: 0;
+}
+  
+.burger-menu.show .line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+/* Media query for mobile devices */
+@media (max-width: 900px) {
+    header {
+        display: none;
+    }
+
+    nav {
+        padding-top: 1px;
+        padding-bottom: 0%; /* Add vertical padding */
+    }
+    
+    .menu-links-container ul {
+        flex-direction: column; /* Stack links vertically on mobile */
+    }
+    
+    nav ul li {
+        margin-right: 0; /* Remove right margin for vertical layout */
+        margin-bottom: 10px; /* Add some spacing between vertical links */
+    }
+
+    .content-row {
+        flex-direction: column;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+
+@media (min-width: 901px) {
+    /* Ensure the menu is initially displayed on regular screens */
+    .menu {
+        display: flex !important; /* Add !important to ensure it overrides previous styles */
+    }
+}
