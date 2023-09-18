@@ -2,14 +2,20 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Vuk Spalajkovic - Technical Artist</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
     <header>
+        <!-- <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div> -->
         <h1>Vuk Spalajkovic</h1>
-        <p>Technical Art Portfolio</p>
+        <h3>Technical Art Portfolio</h3>
+        <h3>vukspalajkovic@gmail.com</h3>
     </header>
     <nav class="menu">
         <div class="burger-menu" onclick="toggleMenu()">
@@ -19,10 +25,9 @@
         </div>
         <div class="menu-links-container">
             <ul>
-                <li><a href="#shaders">Shaders</a></li>
                 <li><a href="#topology">3D & Topology</a></li>
-                <li><a href="#rigging">Rigging</a></li>
-                <li><a href="#animation">Animation</a></li>
+                <li><a href="#shaders">Shaders</a></li>
+                <li><a href="#rigginganim">Rigging & Animation</a></li>
                 <li><a href="#tools">Tool Scripting</a></li>
                 <li><a href="#tutorials">Tutorials</a></li>
                 <li><a href="#about">About</a></li>
@@ -30,81 +35,157 @@
             </ul>
         </div>
     </nav>
-
-    <section id="shaders">
-        <h2>Shaders</h2>
-        <div class="content-row">
-            <img src="images/logo.png" alt="Shader 1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class="content-column">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-    </section>
     
     <section id="topology">
         <h2>3D & Topology</h2>
-        <div class="content-row">
-            <img src="images/logo.png" alt="Shader 1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class="content-column">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="content">
+            <div class="content-column">
+                <h3>Vendir: Plague of Lies - Weapons</h3>
+                    <p>These are all the weapons I worked on for Vendir: Plague of Lies, my responsibility was their low poly topology and UV's, which most of are tightly packed on 1k atlases as shown below. Their poly count ranges from 100 to 3000.</p>
+                    <video autoplay muted loop playsinline>
+                        <source src="videos/vuk-spalajkovic-vendir-weapons.mp4" type="video/mp4">
+                    </video>
+                    <div class="content-row">
+                        <img src="images/3d/vuk-spalajkovic-vendir-maces.gif" alt="weapons">
+                        <img src="images/3d/vuk-spalajkovic-vendir-staves.gif" alt="weapons">
+                        <img src="images/3d/vuk-spalajkovic-vendir-maces-staves.gif" alt="weapons">
+                    </div>
+                    <div class="content-row">
+                        <img src="images/3d/vuk-spalajkovic-vendir-weapons2.png" alt="weapons">
+                        <img src="images/3d/vuk-spalajkovic-vendir-weapons3.png" alt="weapons">
+                        <img src="images/3d/vuk-spalajkovic-vendir-weaponsBB.png" alt="weapons">
+                    </div>
+            </div>
+            <div class="content-column">
+                <h3>Vendir: Plague of Lies - Faceless armor sets</h2>
+                    <p>This is an example of armors I worked on on Vendir, all of the pieces are modular and interchangable for male and female characters, I made their low poly meshes, UV's and skinning, as I did for all other armor sets in the game, but I chose to showcase these as I personally find them to be the coolest looking.</p>
+                    <div class="content-column">
+                        <img src="images/3d/vuk-spalajkovic-vendir-faceless.gif" alt="weapons">
+                    </div>
+                </div>
+            <div class="content-column">
+                <h3>Pagan: Absent Gods - Hector, Daeliblat Strangeman Skin</h2>
+                <p>This is the skin for Hector I worked on at Mad Head Games for Pagan Online(now renamed to Pagan: Absent Gods). The concept, base model, rats, weapon, textures, rig and animations were done by my colleagues, my assignment was high-poly, low-poly, UV and baking for the armor and clothing, as well as the Scrap-O-Tron(the turret ability shown in the animation).</p>
+                <img src="images/3d/vuk-spalajkovic-lp.jpg" alt="lp">
+                <div class="content-row">
+                    <img src="images/3d/vuk-spalajkovic-hector-drop.gif" alt="animation">
+                    <img src="images/3d/vuk-spalajkovic-hector-scrap.gif" alt="animation">
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="rigging">
-        <h2>Rigging</h2>
-        <div class="content-row">
-            <img src="images/logo.png" alt="Shader 1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class="content-column">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <section id="shaders">
+        <h2>Shaders</h2>
+        <div class="content">
+            <div class="content-column">
+                <h3>General purpose PBR shader</h3>
+                <p>This is an example of a Unity shader graph that supports a variety of generally used features in the PBR pipeline. A variety of such a shader was used for materials that can be seen in the <a href="#topology">3D & Topology</a> section.</p>
+                <img src="images/shaders/vuk-spalajkovic-shaders-general-pbr.png" alt="Shader 1">
+                <p>This shader takes 1 mandatory texture map as input Albedo, and Albedo Mask, Roughness/Metallic map, Normal map are optional. In case there are no optional maps provided, normals are generated based on the Albedo, while the roughness and metallic channels use 0 to 1 values instead. Dissolving, Normal Map's strength and channel flipping and Roughness/Metallic splitting are done in shader sub-graphs as can be seen below, as those are modules that can be used in other shaders in the project.</p>
+                <div class="content-column">
+                    <p>Normal map sub-graph</p>
+                    <img src="images/shaders/vuk-spalajkovic-shaders-subgraph-normal.png" alt="Shader sub-graphs">
+                    <p>Roughness/Metallic sub-graph</p>
+                    <img src="images/shaders/vuk-spalajkovic-shaders-subgraph-rm.png" alt="Shader sub-graphs">
+                    <p>Dissolve sub-graph</p>
+                    <img src="images/shaders/vuk-spalajkovic-shaders-subgraph-dissolve.png" alt="Shader sub-graphs">
+                </div>
+            </div>
+            <div class="content-column">
+                <h3>Face customization shader</h3>
+                <p>This shader is used for face choices for character creation in Vendir: Plague of Lies. In essence it layers different transparent face parts over the main complexion one.</p>
+                <img src="images/shaders/vuk-spalajkovic-shaders-faces.png" alt="Shader 2">
+                <p>Video showcasing the shader in action.</p>
+                <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline>
+                    <source src="videos/vuk-spalajkovic-vendir-faces.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
     </section>
 
-    <section id="animation">
-        <h2>Animation</h2>
-        <div class="content-row">
-            <img src="images/logo.png" alt="Shader 1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class="content-column">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <section id="rigginganim">
+        <h2>Rigging & Animation</h2>
+        <div class="content">
+            <div class="content-column">
+                <h3>Quadruped rig</h3>
+                <p>Example of a quadruped rig used on this monster.</p>
+                <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline>
+                    <source src="videos/vuk-spalajkovic-rigging-quadruped.mp4" type="video/mp4">
+                </video>
+                <p>Idle</p>
+                <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline>
+                    <source src="videos/vuk-spalajkovic-rigging-quadruped-idle.mp4" type="video/mp4">
+                </video>
+                <p>Attack</p>
+                <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline>
+                    <source src="videos/vuk-spalajkovic-rigging-quadruped-attack.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="content-column">
+                <h3>Humanoid bipedal rig</h3>
+                <p>This is a classic humanoid rig made in Maya with HIK and Mixamo which I find works very well for most humanoid animations that don't involve anything custom.</p>
+                <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline>
+                    <source src="videos/vuk-spalajkovic-rigging-biped.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
     </section>
 
     <section id="tools">
         <h2>Tooling & Scripting</h2>
-        <div class="content-row">
-            <img src="images/logo.png" alt="Shader 1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class="content-column">
-            
-            <img src="images/logo.png" alt="Shader 1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="content">
+            <div class="content-row">
+                <div class="content-column">
+                    <h3>General Rig tools</h3>
+                    <p>This is a script written in Python using Maya's cmds library and PySide2.QWidgets for UI. It's built upon a BaseUI class that I made so it's very easily extendable to support other feature, here are just showcased different types of inputs that are supported.</p>
+                    <a href="code-genrig.html" target="_blank">Link to the code</a>
+                    <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline>
+                        <source src="videos/vuk-spalajkovic-tooling-genrig.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="content-column">
+                    <h3>UV Sorter tool</h3>
+                    <p>This tool was also written in Python using Maya's cmds library but UI was made with Maya's built in UI options without using a third party library. It's used to scale and move the UV's of selected object(s) and I find it very useful when having to custom pack some atlases.</p>
+                    <a href="code-uv.html" target="_blank">Link to the code</a>
+                    <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline>
+                        <source src="videos/vuk-spalajkovic-tooling-uv.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="tutorials">
         <h2>Tutorials</h2>
-        <div class="content-row">
-            <img src="images/logo_figura.jpg" alt="Shader 1">
-            <p>
-                This channel is dedicated to 3D modeling, texturing, rigging, animation. I hope you enjoy my videos and find them useful in your own projects. I'm always looking for new ideas and suggestions for tutorials, so please feel free to contact me with your ideas.
-            </p>
-        </div>
-        <div class="content-column">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="content">
+            <div class="content-row">
+                <img src="images/logo_figura.jpg" width="256px" alt="tutorials">
+                <div class="content-column">
+                    <p>I made the <a href="https://www.youtube.com/@Figura3D" target="_blank">Figura</a> youtube channel because I wanted to share my knowledge with the world, because that's how I gained it in the first place. I am happy that it reached 1500 subscribers at the time of writing this. I believe it showcases my ability to relay knowledge to others which I found to be a pretty important skill for a technical artist in a team.</p>
+                    <p>I believe it showcases my ability to relay knowledge to others which I found to be a pretty important skill for a technical artist in a team.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
-        <div class="content-column">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="content">
+            <div class="content-column">
+                <p>I am Vuk Spalajkovic, a 3D and Technical Artist with 8 years of experience in developing video games.</p>
+                <p>Currently working at <a href="https://earlymorningstudio.com/" target="_blank">Early Morning Studio</a> as a Technical Artist since April 2021, where I am responsible for all things related to art-to-engine integration, 3D art, optimization of assets, rigging and animation.</p>
+                <p>Previous work experience:
+                    <br/>- Technical Artist at Two Desperados from April 2020 to April 2021 on Viola's Quest and Woka Woka
+                    <br/>- Technical Artist at Mad Head Games from January 2019 to November 2019 on Pagan Online(now named Pagan: Absent Gods on Steam)
+                    <br/>- 3D and Technical Artist at Eipix Entertainment from November 2015 to February 2017 on multiple F2P games and Althora, a VR project published on Oculus Store
+                    <br/>- 3D Artist at Endtimes Studio from September 2014 to October 2015 Created 3D models for a few VR projects: Plugged, Orbos 3D, and a real-time architectural visualization project
+                </p>
+                <p>Education:
+                    <br/>Faculty of Applied Arts in Belgrade
+                    <br/>Bachelor's degree, Sculpture
+                    <br/>2012 - 2016
+            </div>
         </div>
     </section>
 

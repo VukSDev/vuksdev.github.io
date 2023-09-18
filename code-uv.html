@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code for UV Sorter</title>
+</head>
+<body style="background-color: #111; color: #fff">
+    <pre>
+# uv_sorter.py
+
+import maya.cmds as cmds
+
+def createUI( pWindowTitle, pApplyCallback ):
+    
+    windowID = 'myWindowID'
+    
+    if cmds.window( windowID, exists=True ):
+        cmds.deleteUI( windowID )
+        
+    cmds.window( windowID, title=pWindowTitle, sizeable=False, resizeToFitChildren=True)
+    
+    cmds.rowColumnLayout( numberOfColumns=5, columnWidth=[ (1,75), (2,75), (3,75), (4,75), (5,75) ], columnOffset=[ (10,'right',10) ] )
+
+    cmds.separator( h=10, style='none' )
+
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+
+    buttonH=75
+
+    def quadrant2k1( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.5, scaleV = 0.5)
+
+    def quadrant2k2( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 1, pivotV = 1, scaleU = 0.5, scaleV = 0.5)
+
+    def quadrant2k3( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 0, scaleU = 0.5, scaleV = 0.5)
+
+    def quadrant2k4( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 1, pivotV = 0, scaleU = 0.5, scaleV = 0.5)
+
+    def quadrant1k1( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25)
+
+    def quadrant1k2( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25, uValue = 0.25)
+
+    def quadrant1k3( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25, uValue = 0.5)
+
+    def quadrant1k4( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25, uValue = 0.75)  
+
+    def quadrant1k5( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25, vValue = -0.25)            
+
+    def quadrant1k6( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25, vValue = -0.25, uValue = 0.25)
+
+    def quadrant1k7( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25, vValue = -0.25, uValue = 0.5)
+
+    def quadrant1k8( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25, vValue = -0.25, uValue = 0.75)
+
+    def quadrant1k9( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25, vValue = -0.5)
+
+    def quadrant1k10( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25, vValue = -0.5, uValue = 0.25)
+
+    def quadrant1k11( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25, vValue = -0.5, uValue = 0.5)
+
+    def quadrant1k12( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25, vValue = -0.5, uValue = 0.75)
+
+    def quadrant1k13( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25, vValue = -0.75)
+
+    def quadrant1k14( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25, vValue = -0.75, uValue = 0.25) 
+
+    def quadrant1k15( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25, vValue = -0.75, uValue = 0.5)            
+
+    def quadrant1k16( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 1, scaleU = 0.25, scaleV = 0.25, vValue = -0.75, uValue = 0.75) 
+
+    def moveUp( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 0, vValue = 0.5)
+
+    def moveDown( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 0, vValue = -0.5)
+
+    def moveLeft( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 0, uValue = -0.5)
+
+    def moveRight( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 0, uValue = 0.5)
+
+    def moveUp1( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 0, vValue = 0.25)
+
+    def moveDown1( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 0, vValue = -0.25)
+
+    def moveLeft1( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 0, uValue = -0.25)
+
+    def moveRight1( *Args ):
+        cmds.select(cmds.polyListComponentConversion(tuv = True))
+        cmds.polyEditUV(pivotU = 0, pivotV = 0, uValue = 0.25)
+
+    cmds.text( label='1/4' )
+
+    cmds.button( label='Move Up', command= moveUp, h=buttonH)
+    cmds.button( label='Move Down', command= moveDown, h=buttonH)
+    cmds.button( label='Move Left', command= moveLeft, h=buttonH)
+    cmds.button( label='Move Right', command= moveRight, h=buttonH)
+
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+
+    cmds.button( label='1', command= quadrant2k1, h=buttonH )
+    cmds.separator( h=10, style='none' )
+    cmds.button( label='2', command= quadrant2k2, h=buttonH )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.button( label='3', command= quadrant2k3, h=buttonH )
+    cmds.separator( h=10, style='none' )
+    cmds.button( label='4', command= quadrant2k4, h=buttonH )
+    cmds.separator( h=10, style='none' )
+
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    
+    cmds.text( label='1/16' )
+
+    cmds.button( label='Move Up', command= moveUp1, h=buttonH)
+    cmds.button( label='Move Down', command= moveDown1, h=buttonH)
+    cmds.button( label='Move Left', command= moveLeft1, h=buttonH)
+    cmds.button( label='Move Right', command= moveRight1, h=buttonH)
+
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+
+    cmds.button( label='1', command= quadrant1k1, h=buttonH )
+    cmds.button( label='2', command= quadrant1k2, h=buttonH )
+    cmds.button( label='3', command= quadrant1k3, h=buttonH )
+    cmds.button( label='4', command= quadrant1k4, h=buttonH )
+        
+    cmds.separator( h=10, style='none' )
+        
+    cmds.button( label='5', command= quadrant1k5, h=buttonH )
+    cmds.button( label='6', command= quadrant1k6, h=buttonH )
+    cmds.button( label='7', command= quadrant1k7, h=buttonH )
+    cmds.button( label='8', command= quadrant1k8, h=buttonH )
+        
+    cmds.separator( h=10, style='none' )
+        
+    cmds.button( label='9', command= quadrant1k9, h=buttonH )
+    cmds.button( label='10', command= quadrant1k10, h=buttonH )
+    cmds.button( label='11', command= quadrant1k11, h=buttonH )
+    cmds.button( label='12', command= quadrant1k12, h=buttonH )
+        
+    cmds.separator( h=10, style='none' )
+        
+    cmds.button( label='13', command= quadrant1k13, h=buttonH )
+    cmds.button( label='14', command= quadrant1k14, h=buttonH )
+    cmds.button( label='15', command= quadrant1k15, h=buttonH )
+    cmds.button( label='16', command= quadrant1k16, h=buttonH )
+
+    cmds.separator( h=10, style='none' )
+
+    cmds.separator( h=10, style='none' )
+
+    cmds.separator( h=10, style='none' )
+    
+    def cancelCallback( *pArgs ):
+        if cmds.window( windowID, exists=True ):
+            cmds.deleteUI( windowID )
+
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    
+    cmds.button( label='Cancel', command=cancelCallback )
+    
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    cmds.separator( h=10, style='none' )
+    
+    cmds.showWindow()
+
+def applyCallback( *pArgs ):
+    return 0
+    
+createUI( 'UV Sorter', applyCallback )
+</pre>
+</body>
+</html>
