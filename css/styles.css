@@ -156,6 +156,10 @@ h3 {
     gap: 3rem;
 }
 
+.content-column video {
+    max-width: 100%;
+}
+
 /* Scroll-to-top button styles */
 .scroll-to-top {
     position: fixed;
