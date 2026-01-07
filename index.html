@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Vuk Spalajkovic - Technical Artist</title>
+    <title>Vuk Spalajkovic | Technical Artist</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
@@ -23,15 +23,27 @@
             <div class="line"></div>
             <div class="line"></div>
         </div>
-        <div class="menu-links-container">
+        <div class="menu-links-container-horizontal">
             <ul>
                 <li><a href="#topology">3D & Topology</a></li>
                 <li><a href="#shaders">Shaders</a></li>
                 <li><a href="#rigginganim">Rigging & Animation</a></li>
                 <li><a href="#tools">Tool Scripting</a></li>
                 <li><a href="#tutorials">Tutorials</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#cv">CV</a></li>
                 <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="menu-links-container-vertical">    
+            <ul>
+                <li><p>Vuk Spalajkovic<br/>Technical Artist</p></li>
+                <li><a href="#topology" onclick="toggleMenu()">3D & Topology</a></li>
+                <li><a href="#shaders" onclick="toggleMenu()">Shaders</a></li>
+                <li><a href="#rigginganim" onclick="toggleMenu()">Rigging & Animation</a></li>
+                <li><a href="#tools" onclick="toggleMenu()">Tool Scripting</a></li>
+                <li><a href="#tutorials" onclick="toggleMenu()">Tutorials</a></li>
+                <li><a href="#cv" onclick="toggleMenu()">CV</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -41,7 +53,7 @@
         <div class="content">
             <div class="content-column">
                 <h3>Vendir: Plague of Lies - Weapons</h3>
-                    <p>These are all the weapons I worked on for Vendir: Plague of Lies, my responsibility was their low poly topology and UV's, which most of are tightly packed on 1k atlases as shown below. Their poly count ranges from 100 to 3000.</p>
+                    <p>These are all the weapons I worked on for <a href="https://store.steampowered.com/app/1478850/Vendir_Plague_of_Lies/" target="_blank">Vendir: Plague of Lies</a>, my responsibility was their low poly topology and UVs, which most of are tightly packed on 1k atlases as shown below. Their poly count ranges from 100 to 3000.<br/>Concept, high poly and textures were done by <a href="https://www.artstation.com/nikola_matkovic" target="_blank">Nikola Matkovic</a>.</p>
                     <video autoplay muted loop playsinline>
                         <source src="videos/vuk-spalajkovic-vendir-weapons.mp4" type="video/mp4">
                     </video>
@@ -58,14 +70,15 @@
             </div>
             <div class="content-column">
                 <h3>Vendir: Plague of Lies - Faceless armor sets</h2>
-                    <p>This is an example of armors I worked on on Vendir, all of the pieces are modular and interchangable for male and female characters, I made their low poly meshes, UV's and skinning, as I did for all other armor sets in the game, but I chose to showcase these as I personally find them to be the coolest looking.</p>
+                    <p>This is an example of armors I worked on <a href="https://store.steampowered.com/app/1478850/Vendir_Plague_of_Lies/" target="_blank">Vendir: Plague of Lies</a>, all of the pieces are modular and interchangable for male and female characters, I made their and low poly meshes, UVs and skinning, as I did for all other armor sets in the game, but I chose to showcase these as I personally find them to be the coolest looking.<br/>Concept, high poly and textures were done by <a href="https://www.artstation.com/nikola_matkovic" target="_blank">Nikola Matkovic</a>.</p>
                     <div class="content-column">
                         <img src="images/3d/vuk-spalajkovic-vendir-faceless.gif" alt="weapons">
                     </div>
                 </div>
             <div class="content-column">
                 <h3>Pagan: Absent Gods - Hector, Daeliblat Strangeman Skin</h2>
-                <p>This is the skin for Hector I worked on at Mad Head Games for Pagan Online(now renamed to Pagan: Absent Gods). The concept, base model, rats, weapon, textures, rig and animations were done by my colleagues, my assignment was high-poly, low-poly, UV and baking for the armor and clothing, as well as the Scrap-O-Tron(the turret ability shown in the animation).</p>
+                <p>This is the skin for Hector I worked on at <a href="https://www.madheadgames.com/" target="_blank">Mad Head Games</a> for Pagan Online(now renamed to <a href="https://store.steampowered.com/app/992640/Pagan_Absent_Gods/" target="_blank">Pagan: Absent Gods</a>). The concept, base model, rats, weapon, textures, rig and animations were done by my colleagues, my assignment was high-poly, low-poly, UV and baking for the armor and clothing, as well as the Scrap-O-Tron(the turret ability shown in the animation).<br/>
+                Concept art and texture paint was done by <a href="https://www.artstation.com/neneza" target="_blank">Boris Nenezic</a></p>
                 <img src="images/3d/vuk-spalajkovic-lp.jpg" alt="lp">
                 <div class="content-row">
                     <img src="images/3d/vuk-spalajkovic-hector-drop.gif" alt="animation">
@@ -162,25 +175,27 @@
             <div class="content-row">
                 <img src="images/logo_figura.jpg" width="256px" alt="tutorials">
                 <div class="content-column">
-                    <p>I made the <a href="https://www.youtube.com/@Figura3D" target="_blank">Figura</a> youtube channel because I wanted to share my knowledge with the world, because that's how I gained it in the first place. I am happy that it reached 2000 subscribers at the time of writing this.</p>
-                    <p>I believe it showcases my ability to relay knowledge to others which I found to be a pretty important skill for a technical artist in a team.</p>
+                    <p><a href="https://www.youtube.com/@Figura3D" target="_blank">Figura</a> youtube channel is my way of sharing my knowledge with the world, because that's how I gained it in the first place.<br/>
+                        I'm happy that it reached 2350 subscribers at the time of writing this, and the comments by the people that find solutions to their problems through the videos is what I am most proud of in my career.</p>
+                    <p>I believe that one of the most important roles of a Technical Artist in a team is to relay knowledge to others.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
+    <section id="cv">
+        <h2>CV</h2>
         <div class="content">
             <div class="content-column">
-                <p>I am Vuk Spalajkovic, a Senior Technical Artist with nearly a decade of experience in being a bridge between art and programming in game development.</p>
-                <p>Currently working at <a href="https://three-swords.com/" target="_blank">Three Swords Studio</a> as a Senior Technical Artist since February 2024 on <a href="https://store.steampowered.com/app/2877540/Heretical/" target="_blank">Heretical</a>, a game released to Early Access, on which I am responsible for all things related to art-to-engine integration, 3D art, optimization of assets, rigging, animation, vfx, general tooling and development.</p>
+                <p>Vuk Spalajkovic is a Senior Technical Artist with over 10 years of experience in being a bridge between art and programming in game development.</p>
+                <p>Currently working at <a href="https://www.yarnhub.org/" target="_blank">Yarnhub</a> on <a href="https://store.steampowered.com/app/3606970/Brass_Rain/" target="_blank">Brass Rain</a> as a Senior Technical Artist since October 2025</p>
                 <p>Previous work experience:
-                    <br/>- Technical Artist at <a href="https://earlymorningstudio.com/" target="_blank">Early Morning Studio</a> from April 2021 to January 2024 on <a href="https://store.steampowered.com/app/1478850/Vendir_Plague_of_Lies/" target="_blank">Vendir: Plague of Lies</a> until it's release in february 2023 and an unannounced project after that
-                    <br/>- Technical Artist at <a href="https://twodesperados.com/" target="_blank">Two Desperados</a> from April 2020 to April 2021 on <a href="https://play.google.com/store/apps/details?id=com.twodesperados.violasquest&hl=en" target="_blank">Viola's Quest</a> and <a href="https://www.wokawokagame.com/" target="_blank">Woka Woka</a>
-                    <br/>- Technical Artist at <a href="https://www.madheadgames.com/" target="_blank">Mad Head Games</a> from January 2019 to November 2019 on Pagan Online(now named <a href="https://store.steampowered.com/app/992640/Pagan_Absent_Gods/" target="_blank">Pagan: Absent Gods</a> on Steam)
-                    <br/>- 3D and Technical Artist at <a href="https://www.eipix.com/" target="_blank">Eipix Entertainment</a> from November 2015 to February 2017 on multiple F2P games and <a href="https://www.meta.com/experiences/althora/983261678442712/?srsltid=AfmBOooJTXBtkJKWh12QAJqTI15aHXocUu7xeodv06KMgJcYtTHiq-8q" target="_blank">Althora</a>, a VR project published on Oculus(now Meta) Store
-                    <br/>- 3D Artist at Endtimes Studio from September 2014 to October 2015 Created 3D models for a few VR projects: Plugged, Orbos 3D, and a real-time architectural visualization project
+                    <br/>- Senior Technical Artist at <a href="https://three-swords.com/" target="_blank">Three Swords Studio</a> on <a href="https://store.steampowered.com/app/2877540/Heretical/" target="_blank">Heretical</a>, Feb 2024 to mid 2025
+                    <br/>- Technical Artist at <a href="https://earlymorningstudio.com/" target="_blank">Early Morning Studio</a> on <a href="https://store.steampowered.com/app/1478850/Vendir_Plague_of_Lies/" target="_blank">Vendir: Plague of Lies</a> until it's release in February 2023 and an unannounced project after that, Apr 2021 to Jan 2024 
+                    <br/>- Technical Artist at <a href="https://twodesperados.com/" target="_blank">Two Desperados</a> on <a href="https://play.google.com/store/apps/details?id=com.twodesperados.violasquest&hl=en" target="_blank">Viola's Quest</a> and <a href="https://www.wokawokagame.com/" target="_blank">Woka Woka</a>. Apr 2020 to Apr 2021
+                    <br/>- Technical Artist at <a href="https://www.madheadgames.com/" target="_blank">Mad Head Games</a> on <a href="https://store.steampowered.com/app/992640/Pagan_Absent_Gods/" target="_blank">Pagan: Absent Gods</a>, Jan 2019 to Nov 2019
+                    <br/>- 3D and Technical Artist at <a href="https://www.eipix.com/" target="_blank">Eipix Entertainment</a> on multiple unreleased F2P games and <a href="https://www.meta.com/experiences/althora/983261678442712/?srsltid=AfmBOooJTXBtkJKWh12QAJqTI15aHXocUu7xeodv06KMgJcYtTHiq-8q" target="_blank">Althora</a>, Nov 2015 to Feb 2017
+                    <br/>- 3D Artist at Endtimes Studio on a few VR projects: Plugged, Orbos 3D, and a real-time architectural visualization project, Sep 2014 to Oct 2015
                 </p>
                 <p>Education:
                     <br/>Faculty of Applied Arts in Belgrade
@@ -219,11 +234,11 @@
         </section>
         <p>vukspalajkovic@gmail.com</p>
         <br/>
-        <p>&copy; 2023 Vuk Spalajkovic</p>
+        <p>&copy; 2026 Vuk Spalajkovic</p>
     </footer>
 
     <script src="js/scroll-to-top.js"></script>
-    <script src="js/scroll-to-section.js"></script>
+    <!-- <script src="js/scroll-to-section.js"></script> -->
     <script src="js/burger-menu.js"></script>
 </body>
 </html>
