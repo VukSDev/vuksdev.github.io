@@ -28,7 +28,11 @@
                 <li><a href="#topology">3D & Topology</a></li>
                 <li><a href="#shaders">Shaders</a></li>
                 <li><a href="#rigginganim">Rigging & Animation</a></li>
+                <li><a href="#vfx">VFX</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#code">Code</a></li>
                 <li><a href="#tools">Tool Scripting</a></li>
+                <li><a href="#vr">VR</a></li>
                 <li><a href="#tutorials">Tutorials</a></li>
                 <li><a href="#cv">CV</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -40,7 +44,11 @@
                 <li><a href="#topology" onclick="toggleMenu()">3D & Topology</a></li>
                 <li><a href="#shaders" onclick="toggleMenu()">Shaders</a></li>
                 <li><a href="#rigginganim" onclick="toggleMenu()">Rigging & Animation</a></li>
+                <li><a href="#vfx" onclick="toggleMenu()">VFX</a></li>
+                <li><a href="#characters" onclick="toggleMenu()">Characters</a></li>
+                <li><a href="#code" onclick="toggleMenu()">Code</a></li>
                 <li><a href="#tools" onclick="toggleMenu()">Tool Scripting</a></li>
+                <li><a href="#vr" onclick="toggleMenu()">VR</a></li>
                 <li><a href="#tutorials" onclick="toggleMenu()">Tutorials</a></li>
                 <li><a href="#cv" onclick="toggleMenu()">CV</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
@@ -53,7 +61,7 @@
         <div class="content">
             <div class="content-column">
                 <h3>Vendir: Plague of Lies - Weapons</h3>
-                    <p>These are all the weapons I worked on for <a href="https://store.steampowered.com/app/1478850/Vendir_Plague_of_Lies/" target="_blank">Vendir: Plague of Lies</a>, my responsibility was their low poly topology and UVs, most of which are tightly packed on 1k atlases as shown below. Their poly count ranges from 100 to 3000.<br/>Concept, high poly and textures were done by <a href="https://www.artstation.com/nikola_matkovic" target="_blank">Nikola Matkovic</a>.</p>
+                    <p>These are all the weapons I worked on for <a href="https://store.steampowered.com/app/1478850/Vendir_Plague_of_Lies/" target="_blank">Vendir: Plague of Lies</a>, my responsibility was their low poly topology and UVs, which most of are tightly packed on 1k atlases as shown below. Their poly count ranges from 100 to 3000.<br/>Concept, high poly and textures were done by <a href="https://www.artstation.com/nikola_matkovic" target="_blank">Nikola Matkovic</a>.</p>
                     <video autoplay muted loop playsinline>
                         <source src="videos/vuk-spalajkovic-vendir-weapons.mp4" type="video/mp4">
                     </video>
@@ -70,7 +78,7 @@
             </div>
             <div class="content-column">
                 <h3>Vendir: Plague of Lies - Faceless armor sets</h2>
-                    <p>This is an example of armors I worked on <a href="https://store.steampowered.com/app/1478850/Vendir_Plague_of_Lies/" target="_blank">Vendir: Plague of Lies</a>, all of the pieces are modular and interchangable for male and female characters, I made their low poly meshes, UVs and skinning, as I did for all other armor sets in the game, but I chose to showcase these as I personally find them to be the coolest looking.<br/>Concept, high poly and textures were done by <a href="https://www.artstation.com/nikola_matkovic" target="_blank">Nikola Matkovic</a>.</p>
+                    <p>This is an example of armors I worked on <a href="https://store.steampowered.com/app/1478850/Vendir_Plague_of_Lies/" target="_blank">Vendir: Plague of Lies</a>, all of the pieces are modular and interchangable for male and female characters, I made their and low poly meshes, UVs and skinning, as I did for all other armor sets in the game, but I chose to showcase these as I personally find them to be the coolest looking.<br/>Concept, high poly and textures were done by <a href="https://www.artstation.com/nikola_matkovic" target="_blank">Nikola Matkovic</a>.</p>
                     <div class="content-column">
                         <img src="images/3d/vuk-spalajkovic-vendir-faceless.gif" alt="weapons">
                     </div>
@@ -92,14 +100,9 @@
         <h2>Shaders</h2>
         <div class="content">
             <div class="content-column">
-                <h3>General purpose PBR shader - Unreal Engine</h3>
-                <p>This is an example of an Unreal Engine master material that supports a variety of generally used features in the PBR pipeline and the ability to blend the mesh it is applied to with a Runtime Virtual Texture for seamless transition with the environment, using a custom <a href="#heightblend">height blend material function</a>.</p>
-                <img src="images/shaders/vuk-spalajkovic-shaders-general-pbr-unreal.png" alt="Shader Unreal">
-                <p id="heightblend">Height blend material function</p>
-                <img src="images/shaders/vuk-spalajkovic-shaders-materialfunction-heightblend.png" alt="Shader sub-graphs">
-                <h3>General purpose PBR shader - Unity</h3>
+                <h3>General purpose PBR shader</h3>
                 <p>This is an example of a Unity shader graph that supports a variety of generally used features in the PBR pipeline. A variety of such a shader was used for materials that can be seen in the <a href="#topology">3D & Topology</a> section.</p>
-                <img src="images/shaders/vuk-spalajkovic-shaders-general-pbr-unity.png" alt="Shader Unity">
+                <img src="images/shaders/vuk-spalajkovic-shaders-general-pbr.png" alt="Shader 1">
                 <p>This shader takes 1 mandatory texture map as input Albedo, and Albedo Mask, Roughness/Metallic map, Normal map are optional. In case there are no optional maps provided, normals are generated based on the Albedo, while the roughness and metallic channels use 0 to 1 values instead. Dissolving, Normal Map's strength and channel flipping and Roughness/Metallic splitting are done in shader sub-graphs as can be seen below, as those are modules that can be used in other shaders in the project.</p>
                 <div class="content-column">
                     <p>Normal map sub-graph</p>
@@ -150,6 +153,67 @@
         </div>
     </section>
 
+    <section id="vfx">
+        <h2>VFX</h2>
+        <div class="content">
+            <div class="content-column">
+                <h3>VFX - Fire</h3>
+                <p>This is a fire effect I made in Unity using the VFX graph. It uses a combination of 3D meshes and 2D sprites to achieve the final look.</p>
+                <!-- <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline>
+                    <source src="videos/vuk-spalajkovic-vfx-fire.mp4" type="video/mp4">
+                </video> -->
+            </div>
+            <div class="content-column">
+                <h3>VFX - Smoke</h3>
+                <p>This is a smoke effect I made in Unity using the VFX graph. It uses a combination of 3D meshes and 2D sprites to achieve the final look.</p>
+                <!-- <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline>
+                    <source src="videos/vuk-spalajkovic-vfx-smoke.mp4" type="video/mp4">
+                </video> -->
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-column">
+                <h3>VFX - Water</h3>
+                <p>This is a water effect I made in Unity using the VFX graph. It uses a combination of 3D meshes and 2D sprites to achieve the final look.</p>
+                <!-- <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline>
+                    <source src="videos/vuk-spalajkovic-vfx-water.mp4" type="video/mp4">
+                </video> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="characters">
+        <h2>Characters</h2>
+        <div class="content">
+            <div class="content-column">
+                <h3>Vendir: Plague of Lies - Characters</h3>
+                <p>These are some of the characters I worked on for Vendir: Plague of Lies, my responsibility was their low poly topology and UV's, which most of are tightly packed on 1k atlases as shown below. Their poly count ranges from 1000 to 5000.</p>
+                <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline>
+                    <source src="videos/vuk-spalajkovic-vendir-characters.mp4" type="video/mp4">
+                </video>
+                <div class="content-row">
+                    <img src="images/3d/vuk-spalajkovic-vendir-characters.gif" alt="characters">
+                    <img src="images/3d/vuk-spalajkovic-vendir-characters2.gif" alt="characters">
+                    <img src="images/3d/vuk-spalajkovic-vendir-characters3.gif" alt="characters">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="code">
+        <h2>Code</h2>
+        <div class="content">
+            <div class="content-column">
+                <h3>General purpose C# code</h3>
+                <p>This is a general purpose C# code I wrote for Vendir: Plague of Lies, it contains a variety of functions that are used in the game. It is written in a modular way so it can be easily extended and reused.</p>
+                <a href="code-general.html" target="_blank">Link to the code</a>
+                <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline>
+                    <source src="videos/vuk-spalajkovic-code-general.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
     <section id="tools">
         <h2>Tooling & Scripting</h2>
         <div class="content">
@@ -174,6 +238,16 @@
         </div>
     </section>
 
+    <section id="vr">
+        <h2>VR</h2>
+        <div class="content">
+            <div class="content-column">
+                <h3>Althora - VR project</h3>
+                <p>This is a VR project I worked on at Eipix Entertainment. I was responsible for the low poly topology and UV's, as well as rigging and skinning of the characters. The project was a real-time architectural visualization project that was published on Oculus(now Meta) Store.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="tutorials">
         <h2>Tutorials</h2>
         <div class="content">
@@ -193,14 +267,14 @@
         <div class="content">
             <div class="content-column">
                 <p>Vuk Spalajkovic is a Senior Technical Artist with over 10 years of experience in being a bridge between art and programming in game development.</p>
-                <p>Currently working at <a href="https://www.yarnhub.org/" target="_blank">Yarnhub</a> on <a href="https://store.steampowered.com/app/3606970/Brass_Rain/" target="_blank">Brass Rain</a> as a Senior Technical Artist since October 2025</p>
+                <p>Currently working at <a href="https://www.yarnhub.org/" target="_blank">Yarnhub</a> as a Senior Technical Artist since October 2025 on <a href="https://store.steampowered.com/app/3606970/Brass_Rain/" target="_blank">Brass Rain</a></p>
                 <p>Previous work experience:
-                    <br/>- Senior Technical Artist at <a href="https://three-swords.com/" target="_blank">Three Swords Studio</a> on <a href="https://store.steampowered.com/app/2877540/Heretical/" target="_blank">Heretical</a>, Feb 2024 to mid 2025
-                    <br/>- Technical Artist at <a href="https://earlymorningstudio.com/" target="_blank">Early Morning Studio</a> on <a href="https://store.steampowered.com/app/1478850/Vendir_Plague_of_Lies/" target="_blank">Vendir: Plague of Lies</a> until it's release in February 2023 and an unannounced project after that, Apr 2021 to Jan 2024 
-                    <br/>- Technical Artist at <a href="https://twodesperados.com/" target="_blank">Two Desperados</a> on <a href="https://play.google.com/store/apps/details?id=com.twodesperados.violasquest&hl=en" target="_blank">Viola's Quest</a> and <a href="https://www.wokawokagame.com/" target="_blank">Woka Woka</a>. Apr 2020 to Apr 2021
-                    <br/>- Technical Artist at <a href="https://www.madheadgames.com/" target="_blank">Mad Head Games</a> on <a href="https://store.steampowered.com/app/992640/Pagan_Absent_Gods/" target="_blank">Pagan: Absent Gods</a>, Jan 2019 to Nov 2019
-                    <br/>- 3D and Technical Artist at <a href="https://www.eipix.com/" target="_blank">Eipix Entertainment</a> on multiple unreleased F2P games and <a href="https://www.meta.com/experiences/althora/983261678442712/?srsltid=AfmBOooJTXBtkJKWh12QAJqTI15aHXocUu7xeodv06KMgJcYtTHiq-8q" target="_blank">Althora</a>, Nov 2015 to Feb 2017
-                    <br/>- 3D Artist at Endtimes Studio on a few VR projects: Plugged, Orbos 3D, and a real-time architectural visualization project, Sep 2014 to Oct 2015
+                    <br/>- Senior Technical Artist at <a href="https://three-swords.com/" target="_blank">Three Swords Studio</a> from February 2024 to mid 2025 on <a href="https://store.steampowered.com/app/2877540/Heretical/" target="_blank">Heretical</a>
+                    <br/>- Technical Artist at <a href="https://earlymorningstudio.com/" target="_blank">Early Morning Studio</a> from April 2021 to January 2024 on <a href="https://store.steampowered.com/app/1478850/Vendir_Plague_of_Lies/" target="_blank">Vendir: Plague of Lies</a> until it's release in february 2023 and an unannounced project after that
+                    <br/>- Technical Artist at <a href="https://twodesperados.com/" target="_blank">Two Desperados</a> from April 2020 to April 2021 on <a href="https://play.google.com/store/apps/details?id=com.twodesperados.violasquest&hl=en" target="_blank">Viola's Quest</a> and <a href="https://www.wokawokagame.com/" target="_blank">Woka Woka</a>
+                    <br/>- Technical Artist at <a href="https://www.madheadgames.com/" target="_blank">Mad Head Games</a> from January 2019 to November 2019 on Pagan Online(now named <a href="https://store.steampowered.com/app/992640/Pagan_Absent_Gods/" target="_blank">Pagan: Absent Gods</a> on Steam)
+                    <br/>- 3D and Technical Artist at <a href="https://www.eipix.com/" target="_blank">Eipix Entertainment</a> from November 2015 to February 2017 on multiple F2P games and <a href="https://www.meta.com/experiences/althora/983261678442712/?srsltid=AfmBOooJTXBtkJKWh12QAJqTI15aHXocUu7xeodv06KMgJcYtTHiq-8q" target="_blank">Althora</a>, a VR project published on Oculus(now Meta) Store
+                    <br/>- 3D Artist at Endtimes Studio from September 2014 to October 2015 Created 3D models for a few VR projects: Plugged, Orbos 3D, and a real-time architectural visualization project
                 </p>
                 <p>Education:
                     <br/>Faculty of Applied Arts in Belgrade
